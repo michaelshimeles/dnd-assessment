@@ -1,5 +1,6 @@
 const fs = require("fs");
 
+// Read names from file
 const readNamesFromFile = (inputFilePath) => {
   if (!inputFilePath) {
     throw new Error("Input file path is required");
@@ -13,6 +14,7 @@ const readNamesFromFile = (inputFilePath) => {
   return readNames;
 };
 
+// Writing sorted names to new file
 const writeSortedNamesToFile = (outputFilePath, sortedNames) => {
   // Write the sorted list of names to the output file
   fs.writeFileSync(
